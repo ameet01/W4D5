@@ -1,0 +1,22 @@
+<h1 style='font-size: 50px;' class='showbandheader'> <%= @band.name %> </h1>
+
+<div style='text-align: center; margin-top: -30px'>
+  <%= button_to "Create New Album", new_album_url, method: :get, class: 'railsbutton' %>
+  <%= button_to "Edit Band", edit_band_url(@band), method: :get, class: 'railsbutton' %>
+  <%= button_to "Delete Band", band_url(@band), method: :delete, class: 'railsbutton' %>
+</div>
+
+<% if @band.albums %>
+  <h3 style='font-size: 40px; text-align: center; margin-top: 40px'>Albums:</h3>
+<% else %>
+
+<% end %>
+
+
+<section style='text-align: center'>
+  <% @band.albums.each do |album| %>
+    <section class='albumarea'>
+        <p><%= album.title %><%= button_to "Album Page", album_url(album), method: :get, class: 'railsbutton' %></p>
+    </section>
+  <% end %>
+</section>

@@ -1,0 +1,11 @@
+<h1 class='bandlist' style='font-size: 40px; text-decoration: underline'>List of bands:</h1>
+
+<% @bands.each do |band| %>
+  <section class='bandsection'>
+    <a href="<%= band_url(band.id) %> "><%= band.name %></a>
+  </section>
+<% end %>
+
+<div class="createnewbandbutton" style='text-align: center'>
+  <%= button_to "Create New Band", new_band_url, method: :get, class: 'railsbutton' %>
+</div>

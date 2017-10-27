@@ -16,7 +16,160 @@
 
 
 .logo {
-  font-size: 30px;
-  font-family: 'Georgia';
+  font-size: 80px;
+  font-family: Raleway;
   text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center;
+  color: white;
+  margin-top: 80px;
+}
+
+html {
+  color: lightblue;
+  font-family: Raleway;
+}
+
+body {
+  background: black;
+  background-image: url('http://jboogie.com/wp-content/uploads/2014/07/skin_background.jpg');
+  background-attachment: fixed;
+  font-family: Raleway;
+}
+
+.buttons {
+  float: right;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  font-size: 20px;
+  border-radius: 2px;
+  padding: 2px;
+}
+
+.newsessionform {
+  text-align: center;
+}
+
+.newuserform {
+  text-align: center;
+}
+
+.middle {
+   padding-bottom: 1569px;
+   margin-bottom: -1569px;
+   background: transparent;
+   margin: auto;
+   width: 60%;
+   border: 3px solid lightblue;
+   padding-bottom: 1569px;
+   margin-top: -20px;
+   border-left: 10px solid gray;
+   border-right: 10px solid gray;
+}
+
+.bandsection {
+  width: 400px;
+  margin: auto;
+  margin-bottom: 50px;
+  height: 50px;
+  background: lightblue;
+  color: black;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 30px;
+}
+
+.bandsection a {color:purple;}      /* unvisited link */
+.bandsection a:visited {color:purple;}  /* visited link */
+.bandsection a:hover {color:purple;}  /* mouse over link */
+.bandsection a:active {color:purple}
+
+.bandlist {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.showbandheader {
+  text-align: center;
+}
+
+.albuminfo {
+  margin-top: 30px;
+  font-size: 35px;
+}
+
+.albuminfo h1 {
+  text-decoration: underline;
+}
+
+.titlehr {
+  border-color: lightgray;
+}
+
+.button1 {
+  text-align: center;
+}
+
+.logo a {color:maroon;}      /* unvisited link */
+.logo a:visited {color:lightblue;}  /* visited link */
+.logo a:hover {color:lightblue;}  /* mouse over link */
+.logo a:active {color:lightblue}
+
+.railsbutton {
+  width: 150px;
+  background: #d6ebf2;
+  border: 1px solid gray;
+  border-width: thin;
+  color: black;
+}
+
+.albumarea {
+  width: 350px;
+  margin: auto;
+  margin-bottom: 50px;
+  height: 125px;
+  background: lightblue;
+  color: black;
+  text-align: center;
+  padding-top: 1px;
+  font-size: 35px;
+}
+
+.albumarea p {
+  margin-bottom: -9px;
+}
+
+.tracklist {
+  margin: auto;
+  text-align: center;
+  background: lightblue;
+  border: 1px solid lightblue;
+  width: 300px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.tracklist p {
+  margin: 0;
+}
+
+.uglylyrics {
+  border: 1px solid lightblue;
+  width: 400px;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.uglylyrics p {
+  margin: 0;
+}
+
+.trackinfo {
+  font-size: 23px;
 }

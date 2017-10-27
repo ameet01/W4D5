@@ -1,0 +1,17 @@
+
+<% if flash[:errors] %>
+  <%= flash.now[:errors] %>
+<% end %>
+
+<form class ='newbandform' action="<%= bands_url %>" method="post"  style="text-align: center">
+  <input type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+  <h1 style='font-size: 40px; text-decoration: underline'>New Band</h1>
+
+  <label for="name">Enter band name:</label>
+  <input id='name' type="text" name="band[name]" value="Band Name">
+
+  <br><br>
+  <input type="submit" >
+</form>

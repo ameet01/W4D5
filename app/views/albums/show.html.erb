@@ -1,0 +1,27 @@
+
+
+
+<section style="text-align: center" class='albuminfo'>
+  <h1>ALBUM PAGE</h1>
+  <p>Name: <%= @album.title %></p>
+  <p>Band: <%= @album.band.name %></p>
+  <p>Year: <%= @album.year %></p>
+  <p>Live: <%= @album.live == true ? 'Yes' : 'No' %></p>
+  <section class="tracklist">
+    <p>Tracklist: </p>
+    <% if @album.tracks %>
+      <% @album.tracks.each do |track| %>
+        <p>-<a href="/tracks/<%=track.id%>"><%= track.title %></a> </p>
+      <% end %>
+    <% else %>
+      <p>No Tracks</p>
+    <% end %>
+  </section>
+
+</section>
+
+<div class="button1">
+  <%= button_to "Go To Band Page", band_url(@album.band), method: :get, class: 'railsbutton' %>
+  <br>
+  <%= button_to "Add a track", new_track_url, method: :get, class: 'railsbutton' %>
+</div>

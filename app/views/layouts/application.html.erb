@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>W4D5</title>
+    <title>Music App</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
 
   <body>
 
-    <h1 class='logo'>Music App</h1>
+    <container class='buttons'>
+      <% if current_user %>
+        <%= button_to "Log Out", session_url, method: :delete, class: 'railsbutton' %>
+      <% else %>
+        <%= link_to 'Sign In', new_session_url %>
+        <%= link_to 'New User', new_user_url %>
+      <% end %>
+    </container>
 
-    <% if current_user %>
-      <%= button_to "Log Out", session_url, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign In', new_session_url %>
-      <%= link_to 'New User', new_user_url %>
-    <% end %>
 
-    <%= yield %>
+
+    <section class='middle'>
+      <h1 class='logo'><a href="/">Music App</a></h1>
+      <hr class='titlehr'>
+      <%= yield %>
+    </section>
+
 
   </body>
 </html>

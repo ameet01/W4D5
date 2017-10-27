@@ -1,0 +1,38 @@
+
+<% if flash[:errors] %>
+  <%= flash.now[:errors] %>
+<% end %>
+
+<form class ='newalbumform' action="<%= albums_url %>" method="post"  style="text-align: center">
+  <input type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+  <h1>New Album</h1>
+
+  <label for="title"></label>
+  <input id='title' type="text" name="album[title]" value="Album Name">
+
+  <p>Artist:</p>
+  <label for="albumband"></label>
+  <select name="album[band_id]" id = 'albumband'>
+    <option disabled selected>--select a band--</option>
+    <% Band.all.each do |band| %>
+      <option value=" <%= band.id %> "> <%=band.name%> </option>
+    <% end %>
+  </select>
+
+  <br>
+  <p>Year:</p>
+  <label for="year"></label>
+  <input id='year' type="number" name="album[year]" value="Year made">
+
+  <p>Live?:</p>
+  <label for="live"></label>
+  <select name="album[live]" id = 'live'>
+      <option value="<%=false%>"> No </option>
+      <option value="<%=true%>"> Yes </option>
+  </select>
+
+  <br><br>
+  <input type="submit" >
+</form>
